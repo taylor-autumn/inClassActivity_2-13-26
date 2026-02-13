@@ -1,0 +1,74 @@
+@font-face {
+  font-family: 'MyCustomFont'; /* A name to be used later in your CSS */
+  src: local('My Custom Font'), /* Optional: checks if the font is locally installed on the user's device */
+       url('./glitch.otf') format('woff2');
+  font-weight: normal; /* Define the weight and style for this specific file */
+  font-style: normal;
+  font-display: swap; /* Controls how the font loads and displays */
+}
+
+@font-face {
+  font-family: 'modernCustomFont'; /* A name to be used later in your CSS */
+  src: local('modern Custom Font'), /* Optional: checks if the font is locally installed on the user's device */
+       url('./skinnyModern.otf') format('woff2');
+  font-weight: normal; /* Define the weight and style for this specific file */
+  font-style: normal;
+  font-display: swap; /* Controls how the font loads and displays */
+}
+
+
+body {
+    font-family: 'MyCustomFont';
+    background-image: url("./bg.jpg");
+}
+
+.grid-container {
+    min-height: 100vh;
+    margin: 0 120px;
+    display: grid;
+    grid-template-areas: 
+    "header header header header"
+    "main-left main-left main-right main-right"
+    "footer footer footer footer";
+
+}
+
+.header {
+    grid-area: header;
+    background-color: #f3ff45;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-left {
+    padding: 24px;
+    grid-area: main-left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e048ba;
+}
+.main-right {
+    font-family: "modernCustomFont";
+    padding: 24px;
+    grid-area: main-right;
+    display: flex;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+    background-color: #58fff7;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #ff1b1b;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content {
+    padding: 40px;
+}
